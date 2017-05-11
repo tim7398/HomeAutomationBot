@@ -40,10 +40,10 @@ myMQTTClient = AWSIoTMQTTClient("RaspberryPi")
 # myMQTTClient = AWSIoTMQTTClient("myClientID", useWebsocket=True)
 # Configurations
 # For TLS mutual authentication
-myMQTTClient.configureEndpoint("afcywtkpbovht.iot.us-east-1.amazonaws.com", 8883)
+myMQTTClient.configureEndpoint("rest end point", 8883)
 # For Websocket
 # myMQTTClient.configureEndpoint("YOUR.ENDPOINT", 443)
-myMQTTClient.configureCredentials("/home/pi/deviceSDK/certs/root-CA.crt", "/home/pi/deviceSDK/certs/312b67f390-private.pem.key", "/home/pi/deviceSDK/certs/312b67f390-certificate.pem.crt")
+myMQTTClient.configureCredentials("root crt", "private crt", "certificate")
 # For Websocket, we only need to configure the root CA
 # myMQTTClient.configureCredentials("YOUR/ROOT/CA/PATH")
 myMQTTClient.configureOfflinePublishQueueing(-1)  # Infinite offline Publish queueing
